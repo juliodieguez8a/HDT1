@@ -13,7 +13,7 @@ public class gui extends JPanel{
 	
 	public gui() {
 		/**
-		 * asdfasdfasdfasdfasdf
+		 * comentario :)
 		 */
 	}
 }
