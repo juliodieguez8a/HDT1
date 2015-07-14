@@ -6,14 +6,56 @@
  * @author Julio
  *
  */
-public class Radio {
+public class Radio implements InterfazRadio{
 
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
+	@Override
+	public void encenderApagar() {
 		// TODO Auto-generated method stub
-
+		
 	}
+
+	@Override
+	public void cambiarFrec() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void cargarEmisora(double emisora) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void adelantarEmisora() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void atrasarEmisora() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void guardarEmisora(double emisora, int posicion) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void subirVolumen() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void bajarVolumen() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
 
 }
