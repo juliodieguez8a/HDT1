@@ -7,7 +7,7 @@
 
 public class Radio implements InterfazRadio{
 
-/* =====================
+/** =====================
 *  **** VARIABLES ****
 *  =====================
 */
@@ -19,7 +19,7 @@ private String frecuencia= "AM";
 private int volumen=0;
 double[] memoria_AM = new double [12];
 double[] memoria_FM = new double [12];
-/*
+/**
 *Constructor 
 *inicializa las memorias del radio
 */
@@ -30,10 +30,10 @@ public Radio(){
 	}
 }
 
-/*===================
-* **** Getters ****
-* ===================
-*/
+/**===================
+** **** Getters ****
+** ===================
+**/
 @Override
 public double getEmisora() {
 	return emisora;
@@ -52,11 +52,11 @@ public int getVolumen() {
 public boolean getEncendido(){
     return estado; 
 }
-/*===================
+/**===================
 * **** METODOS ****
 * ===================
 */
-/*
+/**
 * Metodo Utilizado para Encender o Apagar la radio
 */
 	@Override
@@ -69,7 +69,7 @@ public boolean getEncendido(){
 			estado=true;
 		}
 	}
-        /*
+        /**
         * Se utiliza para cambiar frecuencia de am a fm
         */
 	@Override
@@ -93,7 +93,7 @@ public boolean getEncendido(){
 	    emisora=Math.rint(emisora*cifras)/cifras;
 	}
         
-        /*
+        /**
         *Adelanta la emisora, dependiendo si es am o fm
         */
 	@Override
@@ -110,7 +110,7 @@ public boolean getEncendido(){
 		    emisora=Math.rint(emisora*cifras)/cifras;
 		}
 	}
-        /*
+        /**
         *Atrasa la emisora, depende si es am o fm
         */
 	@Override
@@ -126,7 +126,7 @@ public boolean getEncendido(){
 		    emisora=Math.rint(emisora*cifras)/cifras;
 		}	
 	}
-        /*
+        /**
         *Guarda la emisora, utiliza una variable de tipo doble para guardar el numero de la emisora y una variable int para 
         *la memoria en la que se quiere guardar
         */
@@ -140,7 +140,7 @@ public boolean getEncendido(){
 			memoria_FM[posicion]=this.emisora;
 		}
 	}
-	/*
+	/**
         *Carga la emisora, utiliza un int para la identifacar la memoria
         */
 	public void cargarEmisora(int posicion) {
@@ -153,7 +153,7 @@ public boolean getEncendido(){
 			emisora = memoria_FM[posicion];
 		}
 	}
-        /*
+        /**
         *Sube el volumen de uno en uno, mas 10
         */
 	@Override
@@ -163,7 +163,7 @@ public boolean getEncendido(){
 			volumen+=1;
 		}
 	}
-        /*
+        /**
         *Baja el volimen de uno en uno, min 0
         */
 	@Override

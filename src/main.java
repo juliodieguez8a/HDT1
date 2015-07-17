@@ -1,9 +1,9 @@
 /**
- * Jose Ramon Corona  14417
- * Samuel Diaz
- * Julio Dieguez Ochoa   14475 16/7/15
- * HDT1
- */
+ ** Jose Ramon Corona  14417
+ ** Samuel Diaz
+ ** Julio Dieguez Ochoa   14475 16/7/15
+ ** HDT1
+ **/
 
 import javax.swing.JFrame;
 
@@ -13,7 +13,9 @@ public final class main extends JFrame {
     public main() {
         InitUI();
     }
-
+    /**
+     * Se crea un Jframe 
+     */
     public void InitUI() {
         gui board = new gui();
         add(board);

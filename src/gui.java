@@ -12,12 +12,12 @@ import javax.swing.border.Border;
 
 import java.text.*;
 import java.lang.*;
-/*---------------------------Se crea la Clase-------------------------------
+/**---------------------------Se crea la Clase-------------------------------
 *
 */
 public class gui extends JPanel{
 	
-/*--------------------------Variables---------------------------------------
+/**--------------------------Variables---------------------------------------
 *
 */
         private JLabel jLCambioEmisora, jLNombreEmisora, jLNumeroEmisora, jLVolumen, jLMemorias, jLApagado, jLNumVolumen, jLVol;  
@@ -30,7 +30,7 @@ public class gui extends JPanel{
 	
 	public gui() {
 		setLayout(new BorderLayout());
-/*------------------------Componentes de la GUI---------------
+/**------------------------Componentes de la GUI---------------
                 *
                 */
 		jLCambioEmisora = new JLabel ("Emisora"); 	//Se crean e inicializan los labels 
@@ -54,7 +54,7 @@ public class gui extends JPanel{
 		}
 		
 		Mycolor = new Color(50,150,243);		//Color del Radio
-/*------------------Paneles---------------------------------------------
+/**------------------Paneles---------------------------------------------
                 *
                 */
 
@@ -142,10 +142,10 @@ public class gui extends JPanel{
 			jBFrecuencia.addActionListener(blistener4);
 			jBGuardar.addActionListener(blistener4);
 	}	
-/*---------------------------- Inner classs:Botton litener------------------------------------- 
+/**---------------------------- Inner classs:Botton litener------------------------------------- 
         *
         */
-        /*
+        /**
         * Esta clase se utliza para detectar cuando se presiona un botton de la memoria
         */
 	private class MemoriaButtonListener implements ActionListener{	
@@ -155,19 +155,19 @@ public class gui extends JPanel{
                         if( radio.getEncendido()== true){
                             String n = b.getText();
                             if (guardar==true){
-                                    radio.guardarEmisora(0,Integer.parseInt(n));
-                                    System.out.print("guardo");
+                                radio.guardarEmisora(radio.getEmisora(),Integer.parseInt(n));
+                                    System.out.print("guardo ");
                             }
                             else{
                                     radio.cargarEmisora(Integer.parseInt(n));
-                                    System.out.print("cargo");
+                                    System.out.print("cargo ");
                                     jLNumeroEmisora.setText(String.valueOf(radio.getEmisora()));
                             }
                             guardar=false;	
                         }
 		}
 	}
-        /*
+        /**
         * Esta clase se utliza para detectar cuando se presiona un botton del volumen
         */
 	private class ButtonListenerVol implements ActionListener{	
@@ -186,7 +186,7 @@ public class gui extends JPanel{
                         }
 		}
 	}
-        /*Esta clase se utliza para detectar cuando se presiona un botton para cambiar de emisora
+        /**Esta clase se utliza para detectar cuando se presiona un botton para cambiar de emisora
         *
         */
 	private class ButtonListenerEmisora implements ActionListener{	
@@ -205,7 +205,7 @@ public class gui extends JPanel{
                          }
 		}
 	}
-	/*
+	/**
         * Esta clase se utliza para detectar cuando se presiona un botton para apagar la radio, cambar fm o am, guardar estacion
         */
 	private class ButtonListener implements ActionListener{	
