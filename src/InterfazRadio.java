@@ -1,16 +1,34 @@
 /**
  * Jose Ramon Corona  14417
  * Samuel Diaz
- * Julio Dieguez Ochoa   14475 16/7/15
+ * Julio Dieguez Ochoa   14475 
+ * 16/7/15
  * HDT1
  */
 public interface InterfazRadio {
-	
+	/**
+	 * constante que permite el cambio de frecuencia en AM
+	 */
 	final int CONST_CAMBIO_AM = 10;
+	/**
+	 * Constante que permite el cambio de frecuencia en FM
+	 */
 	final double CONST_CAMBIO_FM = 0.2;
+	/**
+	 * Determina la MAx frecuencia que se alcanza en AM
+	 */
 	final int MAX_AM = 1610;
+	/**
+	 * Determina la minima frecuencia que se alcanza en AM
+	 */
 	final int MIN_AM = 530;
+	/**
+	 * Determina ma max frecuancia alcanzada en FM
+	 */
 	final double MAX_FM = 107.9;
+	/**
+	 * Determina la Min frecuencia alcanzada en FM
+	 */
 	final double MIN_FM = 87.9;
 
 
@@ -53,20 +71,30 @@ public interface InterfazRadio {
 	 */
 	public void subirVolumen();
 
-	/**
+	/*
 	 * Metodo que permite bajar el volumen
 	 */
 	public void bajarVolumen();
 
-	//Retorna la emisora actual seleccionada (dependiendo si es AM o FM)
+
+	/**
+	*Retorna la emisora actual seleccionada (dependiendo si es AM o FM)
+	*/
 	public double getEmisora();
-	//Retorna el estado actual de Encendido (true=encendido, false=apagado)
+	/**
+	*Retorna el estado actual de Encendido (true=encendido, false=apagado)
+	*/
 	public boolean getEncendido();
-	//Retorna la frecuencia actual AM o FM
+	/**
+	*Retorna la frecuencia actual AM o FM
+	*/
     public String getFrec();
-
+	/**
+	*Retorna valor entero de Volumen
+	*/
     public int getVolumen();
-    
+ 	/**
+	*toString
+	*/   
     public String toString();
-
 }
